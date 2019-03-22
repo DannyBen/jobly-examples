@@ -1,4 +1,4 @@
-class Greet < Job
+class Greet < Jobly::Job
   # Optional settings (defaults to #debug and Jobly)
   slack_channel '#debug'
   slack_user 'Greeter'
