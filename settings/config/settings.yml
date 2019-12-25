@@ -1,0 +1,10 @@
+host: example.com
+port: 80
+
+apps:
+- /apps/todo-list
+- /apps/greeter
+
+login:
+  user: admin
+  password: <%= ENV['MY_SECRET'] =>

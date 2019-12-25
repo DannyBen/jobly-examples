@@ -1,0 +1,782 @@
+o:WebCache::Response:@contentI"ȏ<html>
+  <head>
+    <title>Jobly Demo by dannyb | Katacoda</title>
+    <link rel="preload" as="style" href="/css/materialize.min.css">
+    <link rel="preload" as="style" href="/css/style2.css">
+    <link rel="preload" as="script" href="/js/jquery-2.1.1.min.js">
+    <link rel="preload" as="script" href="/js/materialize.min.js">
+    <link rel="preload" as="script" href="/js/application.js">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <script type="text/javascript">window._trackJs = { token: '97f1dd886918463ebc84d187024d5aad', application: 'katacoda' };</script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <script type="text/javascript" src="/js/vendor/webfont.js"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ['Open Sans', 'Source Code Pro']
+        },
+        custom: {
+          families: ['franklingoturwtotbooregular']
+        }
+      });
+    </script>
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/fontawesome.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/style2.css"  media="screen,projection"/>
+    <meta name="description" content="Jobly job server demo">
+    <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("5574553b9aa0851a3c9fa0fc4cd101df");</script><!-- end Mixpanel -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-56533756-2', 'katacoda.com');
+      ga('send', 'pageview');
+    </script>
+    <meta property="og:image" content="https://www.katacoda.com/images/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/manifest.json">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0176c0">
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#0176c0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@teamKatacoda" />
+    <meta name="twitter:creator" content="@teamKatacoda" />
+    <meta name="twitter:title" content="Jobly Demo by dannyb | Katacoda" />
+    <meta name="twitter:description" content="Jobly job server demo" />
+    <meta name="twitter:image" content="https://www.katacoda.com/images/twitter-card.png" />
+    <meta property="og:url" content="/dannyb/scenarios/jobly" />
+    <meta property="og:title" content="Jobly Demo by dannyb | Katacoda" />
+    <meta property="og:description" content="Jobly job server demo" />
+    <meta property="og:image" content="https://www.katacoda.com/images/apple-touch-icon-152x152.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Katacoda",
+      "description": "Interactive Learning and Training Platform for Software Engineers",
+      "url": "https://www.katacoda.com",
+      "logo": "https://www.katacoda.com/images/logo-head.png",
+      "sameAs": [
+        "https://www.facebook.com/katacoda",
+        "https://twitter.com/teamKatacoda",
+        "https://github.com/katacoda"
+      ]
+    }
+    </script>
+    <link rel="preload" as="style" href="/css/vendor.css">
+    <link rel="preload" as="style" href="/css/tutorial-style.css">
+    <link rel="preload" as="style" href="/css/course-style.css">
+    <meta name="lastUpdated" content="2019-04-22T05:51:19.881Z" />
+    <meta name="gitCommit" content="c9ac3915cd53191d73ff6486998f93d74f763303" />
+    <link rel="stylesheet" href="/themes/default/style.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/vendor.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/tutorial-style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/course-style.css"  media="screen,projection"/>
+
+    <script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/jstree.min.js"></script>
+  </head>
+
+  <body class="row" style="margin-bottom: 0;height: 100%;">
+    <div id="confirmation-top"></div>
+
+
+    <section id="terminal-v1-view" class="course-container">
+    <section id="terminal-wait"></section>
+  <section id="intro" class="col no-padding m9 s12 z-depth-1 " data-course-data="alias ssh=&quot;ssh -oBatchMode=yes -o TCPKeepAlive=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=30 -o ConnectTimeout=30 -o ConnectionAttempts=30 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=error&quot;
+  alias scp=&quot;scp -oBatchMode=yes -o TCPKeepAlive=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=30 -o ConnectTimeout=30 -o ConnectionAttempts=30 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=error&quot;
+  ssh%20root@host01%20%22mkdir%20-p%20%7E/%3B%20echo%20aW5zdGFsbDogLS1uby1yZG9jIC0tbm8tcmkKdXBkYXRlOiAgLS1uby1yZG9jIC0tbm8tcmkK%20%7C%20base64%20--decode%20%3E%20%7E/.gemrc%22
+  " data-code="PS1=&amp;quot;\n\n\W \$ &amp;quot;\napt-get -y update\napt-get -y install redis-server &amp;lt; /dev/null\ngem install jobly\njobly --version\n\n">
+    <div class="header banner">
+      
+      <h1 class="header center-on-small-only">Welcome!</h1>
+      <h4 class="light center-on-small-only">Jobly Demo</h4>
+    </div>
+    <div class="row no-margin">
+      <div class="col s12">
+  
+        <div id="course-details" class="row">
+            <div class="col s12 m6">
+              <i class="fa fa-star"></i>
+              <span class="key">Difficulty:</span>
+              <span class="value">Beginner</span>
+            </div>
+            <div class="col s12 m6">
+              <i class="fa fa-clock"></i>
+              <span class="key">Estimated Time:</span>
+              <span class="value">10 minutes</span>
+            </div>
+        </div>
+  
+        <html><head></head><body><h1 id="welcome-to-the-jobly-interactive-demo">Welcome to the Jobly interactive demo</h1>
+  <p>For the Jobly documentation and additional examples, visit:
+  <a href="https://jobly.dannyb.co/">jobly.dannyb.co</a></p>
+  <p><img src="/dannyb/scenarios/debug/assets/screen.gif" alt></p>
+  </body></html>
+  
+      </div>
+      <div class="col s12">
+        <div class="right">
+          <button id="hide-intro" class="btn primary-btn">Start Scenario</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="finished" class="col no-padding m9 s12 z-depth-1">
+      <div class="header banner">
+        <h1 class="header center-on-small-only">Congratulations!</h1>
+        <h4 class="light center-on-small-only">You've completed the scenario!</h4>
+        <i id="hide-finish" class="fa fa-times"></i>
+        <div id="rating">
+          <h6>Scenario Rating</h6>
+          <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty Good - 4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="OK - 3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Bad - 2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Serious Problems - 1 star"></label>
+          </fieldset>
+        </div>
+      </div>
+      <div id="finished-content" class="row no-margin">
+        <div id="course-finished-text" class="col s12">
+          <p><html><head></head><body><p>Goodbye.</p>
+  </body></html></p>
+              <div class="social-share row">
+                <div class=" col s4">
+                  <a class="social linkedin">
+                    <i class="fa fa-linkedin"></i>
+                    <div class="">Share Your Success</div>
+                  </a>
+                </div>
+                <div class="col s4">
+                  <a class="social twitter">
+                    <i class="fa fa-twitter"></i>
+                    <div class="">Share Your Success</div>
+                  </a>
+                </div>
+                <div class=" col s4">
+                  <a class="social facebook">
+                    <i class="fa fa-facebook"></i>
+                    <div class="">Share Your Success</div>
+                  </a>
+                </div>
+              </div>
+        </div>
+  
+        <div id="download-started" class="col s12 hidden">
+            <p>Your environment is currently being packaged as a Docker container and the download will begin shortly. To run the image locally, once Docker has been installed, use the commands</p>
+            <pre><code>cat scrapbook_dannyb_jobly_container.tar | docker load</code></pre>
+            <pre><code>docker run -it /dannyb_jobly:</code></pre>
+        </div>
+        <div id="download-not-supported" class="col s12 hidden">
+          <p>Oops!! Sorry, it looks like this scenario doesn't currently support downloads. We'll fix that shortly.</p>
+        </div>
+        <div class="col s12" style="margin-top: 20px;">
+          <div class="col m6 s12">
+                &nbsp;
+                <a href="#" id="reload" class="btn secondary-btn">Restart Scenario</a>
+          </div>
+          <div class="col m6 s12">
+            <div class="right">
+                <a href="/dannyb" id="next-tutorial" class="light-blue waves-effect waves-light btn btn-large">dannyb's Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section>
+    <nav>
+      <a href="/" id="logo" class="brand-logo">
+        <img src="/images/logo-white.png" alt="Katacoda Logo"/>
+        <h1>Katacoda <small>Interactive Learning and Training Platform for Software Engineers</small></h1>
+      </a>
+      <a href="#" style="font-size: 150%;" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle hide-on-large-only">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul id="nav-mobile" class="sidenav sidenav-fixed hide-on-large-only" style="overflow: auto;">
+        <li><a href="/learn">Learn</a></li>
+        <li><a href="/create">Create</a></li>
+        <li><a href="/embed">Embed</a></li>
+        <li><a href="/embed">For Vendors</a></li>
+        <li><a href="/trainers">For Trainers</a></li>
+        <li><a href="/teams">For Teams</a></li>
+        <li><a href="/enterprise">For Enterprises</a></li>
+        <li><a href="/search">Search</a></li>
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+      </ul>
+      
+      <ul class="right hide-on-med-and-down">
+        <li><a class="course-header-only" href="/">Katacoda Overview &amp; Solutions</a></li>
+        <li><a class="hide-on-course" href="/learn">Learn</a></li>
+        <li><a class="hide-on-course" href="/create">Create</a></li>
+        <li><a class="hide-on-course" href="/embed">Embed</a></li>
+        <li><a class="hide-on-course" href="/embed"><span class="header-extra-text">For</span> Vendors</a></li>
+        <li><a class="hide-on-course" href="/trainers"><span class="header-extra-text">For</span> Trainers</a></li>
+        <li><a class="hide-on-course" href="/teams"><span class="header-extra-text">For</span> Teams</a></li>
+        <li><a class="hide-on-course" href="/enterprise"><span class="header-extra-text">For</span> Enterprises</a></li>
+        <li><a href="/search">Search</a></li>
+          <li><a href="/login">Log In</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+      </ul>
+    </nav>
+<section id="tutorial" class="col m4 s12 side-tutorial">
+  <div id="tutorial-resizer"></div>
+  <div id="tutorial-resized" class="hidden">
+    <img src="/images/icons/do.png" alt="Interactive Labs">
+    <h3>Steps</h3>
+  </div>
+  <div id="course-title" class="">
+    <h3>
+      Jobly Demo
+    </h3>
+  </div>
+<div id="step-progress" class="hidden" data-steps="1">
+  <i class="fa fa-caret-left" style="color: #0000"></i>
+  <span id="step-progress-text"><span id="step-progress-name">Step</span> <span class="current">1</span> of <span class="total">1</span></span>
+  <i class="fa fa-caret-right"></i>
+</div>
+  <div id="step-1" class="step " data-id="1" data-code="" data-course-data="" data-verify="">
+      <h4>Welcome</h4>
+    <div class="content">
+      <html><head></head><body><p>Please wait while Jobly is being installed.</p>
+<hr>
+<p>Say hello to Jobly:</p>
+<p><code class="execute">jobly</code></p>
+<p>Create an initial jobs workspace:</p>
+<p><code class="execute">jobly init test</code>
+<code class="execute">cd test</code></p>
+<p>Start jobly server in the background:</p>
+<p><code class="execute">nohup jobly server &amp;</code></p>
+<p>Start jobly worker in the background:</p>
+<p><code class="execute">nohup jobly worker &amp;</code></p>
+<p>Visit the dashboard:</p>
+<p><a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/statuses?poll=true">localhost:3000</a></p>
+<p>Send a job to the server:</p>
+<p><code class="execute">jobly send Ping</code></p>
+<p>Send a few more jobs, with parameters:</p>
+<p><code class="execute">jobly send Hello name:Lloyd</code>
+<code class="execute">jobly send Hello name:Harry</code></p>
+<p>View the Ping job&apos;s source code:</p>
+<p><code class="execute">cat jobs/ping.rb</code></p>
+<hr>
+</body></html>
+    </div>
+
+    <div class="row">
+
+          <button class="col s12 l5 btn primary-btn next right"
+                    data-position="top" data-delay="50" data-tooltip="Please complete the task before proceeding"
+                  >
+            Continue
+          </button>
+    </div>
+  </div>
+</section>
+
+    <section id="split-host" class="col s12 m8 no-padding">
+      <div class="tabbar dropzone">
+        <div class="ktabs">
+            <div class="ktab draggable  active" data-view-id="terminal" data-port="" data-host="">Terminal <a href="" class="close-tab hidden"><i class="fa fa-times"></i></a></div>
+                    <div class="ktab draggable new-window " data-view-id="3000" data-port="3000" data-host="">Jobly Server <a href="" class="close-tab hidden"><i class="fa fa-times"></i></a></div>
+        </div>
+        <div class="controls">
+          <a class="dropdown-button tooltipped"
+            data-target='webpreview-dropdown-terminal'
+            data-position="left" data-delay="50" data-tooltip="Web Preview">
+            <i class="fa fa-plus"></i>
+          </a>
+          <div class="settings-link">
+            <a id="poweroff" class="hidden tooltipped" data-tooltip="Shutdown Cluster">
+              <i class="fa fa-power-off white-text"></i>
+            </a>
+            <a id="report-problem" class="tooltipped" data-tooltip="Report Problem / Give Feedback">
+              <i class="fa fa-bullhorn white-text"></i>
+            </a>
+            <a id="fullscreen" class="tooltipped" data-tooltip="Fullscreen">
+              <i class="fa fa-expand-arrows-alt white-text"></i>
+            </a>
+            <a class="dropdown-button tooltipped"
+              data-target='settings-dropdown-terminal'
+              data-position="left" data-delay="50" data-tooltip="Settings">
+              <i class="fa fa-cog white-text"></i>
+            </a>
+          </div>
+        </div>
+        
+        <ul id='webpreview-dropdown-terminal' class='dropdown-content webpreview-dropdown'>
+        </ul>
+        
+        <ul id='settings-dropdown-terminal' class='dropdown-content settings-dropdown'>
+          <li><a href="" id="presentation-mode">Presentation Mode <span class="tick">&#10004;</span></a></li>
+          <li><a href="" id="light-colour-schema">Light Color Scheme <span class="tick">&#10004;</span></a></li>
+          <li><a href="" id="debug">Debug</a></li>
+        </ul>
+      </div>
+      <section id="terminal" data-host="HOST1" class="terminal-container ">
+      </section>
+    </section>
+  </section>
+</section>
+
+<div id="help-modal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Help</h4>
+    <p>Katacoda offerings an Interactive Learning Environment for Developers. This course uses a command line and a pre-configured sandboxed environment for you to use. Below are useful commands when working with the environment.</p>
+    <table class="cmds">
+    	<tr><td class="cmd">cd &lt;directory&gt;</td><td>Change directory</td></tr>
+    	<tr><td class="cmd">ls</td><td>List directory</td></tr>
+      <tr><td class="cmd">echo 'contents' > &lt;file&gt;</td><td>Write contents to a file</td></tr>
+      <tr><td class="cmd">cat &lt;file&gt;</td><td>Output contents of file</td></tr>
+    </table>
+
+    <h5>Vim</h5>
+    <p>In the case of certain exercises you will be required to edit files or text. The best approach is with Vim. Vim has two different modes, one for entering commands (Command Mode) and the other for entering text (Insert Mode). You need to switch between these two modes based on what you want to do. The basic commands are:</p>
+    <table class="cmds">
+    	<tr><td class="cmd">i</td><td>In Command Mode</td><td>Change into Insert Mode, you can now insert and edit text in the file</td></tr>
+    	<tr><td class="cmd">esc</td><td>In Insert Mode</td><td>Change into Command Mode, you can now execute commands</td></tr>
+    	<tr><td class="cmd">:wq</td><td>In Command Mode</td><td>Save and Exit</td></tr>
+    </table>
+  </div>
+  <div class="modal-footer right">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got It</a>
+  </div>
+</div>
+
+
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/javascripts/term.js"></script>
+  <script type="text/javascript" src="/javascripts/terminal-application.js"></script>
+
+<script>
+  window.on_page_load = function() {
+    course = new CourseApplication();
+    course.init(window.app, {}, {"id":"jobly","pathwayId":"dannyb","pathwayTitle":"dannyb","authenticated":true,"title":"Jobly Demo","environment":{"uilayout":"terminal-v1","showdashboard":true,"dashboards":[{"name":"Jobly Server","port":3000}],"uidependencies":["/socket.io/socket.io.js","/javascripts/term.js","/javascripts/terminal-application.js"]},"backend":{"imageid":"ubuntu1804","dockerimage":"ubuntu1804"}});
+
+    course.view = new TerminalViewLayout();
+    course.view.init();
+  };
+</script>
+
+
+    <div id="registration-modal" class="katacoda-modal modal col m6 offset-m3 s10 offset-s1">
+      <div id="signup" class="">
+        <div id="auth-dialog" class="col s12 m7">
+          <form method="POST" action="/signup">
+            <input id="info" name="info" type="text" />
+            <input name="redirect" type="hidden" value="" />
+            <h2 class="">Welcome! Connect to start</h2>
+            <div class="social-logins row">
+              <div class=" col s6">
+                <a class="social github" href="/auth/github">
+                  <i class="fa fa-github"></i>
+                  <div class="">Sign Up with Github</div>
+                </a>
+              </div>
+              <div class=" col s6">
+                <a class="social linkedin" href="/auth/linkedin">
+                  <i class="fa fa-linkedin"></i>
+                  <div class="">Sign Up with Linkedin</div>
+                </a>
+              </div>
+              <div class="col s6">
+                <a class="social twitter" href="/auth/twitter">
+                  <i class="fa fa-twitter"></i>
+                  <div class="">Sign Up with Twitter</div>
+                </a>
+              </div>
+              <div class=" col s6">
+                <a class="social google" href="/auth/google">
+                  <i class="fa fa-google"></i>
+                  <div class="">Sign Up with Google</div>
+                </a>
+              </div>
+            </div>
+            <h2 class="">...or sign up using your email</h2>
+            <h2 class="hidden">Sign up using your email</h2>
+            <div class="form-contents">
+              <p class="error red-text center"></p>
+              <div class="">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" />
+              </div>
+              <div class="">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" />
+              </div>
+              <div class="actions">
+                <input type="hidden" id="g-recaptcha-version" name="g-recaptcha-version" />
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px;height: 40px;border: 1px solid rgb(193, 193, 193);margin: 10px 25px;padding: 0px; resize: none; display: none;"></textarea>
+                <button type="submit" class="btn primary-btn">Sign Up For Free</button>
+                <a class="login" href="/login">Already have an account? Log it here</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="auth-why" class="col s12 m5">
+          <h2>You’ll love Katacoda</h2>
+          <div class="how-guides">
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/guided.png" alt="Guided Learning Pathway" />
+              </div>
+              <div class="col s8">
+                <h4>Guided Path</h4>
+                <p>
+                  Knowing what you need to know is the hardest part. Our guided pathways help build your knowledge around real-world scenarios.
+                </p>
+              </div>
+            </div>
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/do.png" alt="Interactive Labs" />
+              </div>
+              <div class="col s8">
+                <h4>Learn By Doing</h4>
+                <p>
+                  The best way to learn its by doing. All our tutorials are interactive with pre-configured live environments ready for you to use.
+                </p>
+              </div>
+            </div>
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/done.png" alt="Stay up-to-date" />
+              </div>
+              <div class="col s8">
+                <h4>Stay up-to-date</h4>
+                <p>
+                  It's a competitive industry. Your skills need to keep up with the latest approaches. Katacoda keeps your skills up-to-date.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="login" class="hidden">
+        <div id="auth-dialog" class="col s12 m7">
+          <form method="POST" action="/login">
+            <input name="redirect" type="hidden" value="" />
+            <h2 class="">Welcome back! Connect to start</h2>
+            <div class="social-logins row">
+              <div class=" col s6">
+                <a class="social github" href="/auth/github">
+                  <i class="fa fa-github"></i>
+                  <div class="">Log In with Github</div>
+                </a>
+              </div>
+              <div class=" col s6">
+                <a class="social linkedin" href="/auth/linkedin">
+                  <i class="fa fa-linkedin"></i>
+                  <div class="">Log In with Linkedin</div>
+                </a>
+              </div>
+              <div class="col s6">
+                <a class="social twitter" href="/auth/twitter">
+                  <i class="fa fa-twitter"></i>
+                  <div class="">Log In with Twitter</div>
+                </a>
+              </div>
+              <div class=" col s6">
+                <a class="social google" href="/auth/google">
+                  <i class="fa fa-google"></i>
+                  <div class="">Log In with Google</div>
+                </a>
+              </div>
+            </div>
+            <h2 class="">...or log in using your email</h2>
+            <h2 class="hidden">Log in using your email</h2>
+            <div class="form-contents">
+              <p class="error red-text center"></p>
+              <div class="">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" />
+              </div>
+              <div class="">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" />
+              </div>
+              <div class="actions">
+                <button class="btn primary-btn">Login</button>
+                 <a class="forgot" href="/forgot">Forgot password?</a>
+                 <a class="signup right" href="/signup">Create a new account here.</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="auth-why" class="col s12 m5">
+          <h2>You’ll love Katacoda</h2>
+          <div class="how-guides">
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/guided.png" alt="Guided Learning Pathway" />
+              </div>
+              <div class="col s8">
+                <h4>Guided Path</h4>
+                <p>
+                  Knowing what you need to know is the hardest part. Our guided pathways help build your knowledge around real-world scenarios.
+                </p>
+              </div>
+            </div>
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/do.png" alt="Interactive Labs" />
+              </div>
+              <div class="col s8">
+                <h4>Learn By Doing</h4>
+                <p>
+                  The best way to learn its by doing. All our tutorials are interactive with pre-configured live environments ready for you to use.
+                </p>
+              </div>
+            </div>
+            <div class="how-guide row">
+              <div class="col s4">
+                <img src="/images/icons/done.png" alt="Stay up-to-date" />
+              </div>
+              <div class="col s8">
+                <h4>Stay up-to-date</h4>
+                <p>
+                  It's a competitive industry. Your skills need to keep up with the latest approaches. Katacoda keeps your skills up-to-date.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="restricted-modal" class="katacoda-modal modal col m6 offset-m3 s10 offset-s1">
+      <div id="signup" class="">
+        <div class="auth-dialog col s12">
+          <form method="POST" action="/auth/restricted">
+            <input id="info" name="info" type="text" />
+            <input name="type" type="hidden" value="email" />
+            <h2 class="">Welcome! Enter your email address to connect</h2>
+            <div class="form-contents">
+              <p class="error red-text center"></p>
+              <div class="">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" />
+              </div>
+              <div class="actions">
+                <button type="submit" class="btn primary-btn">Connect</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script>
+      var modal_init = function() {
+        var context = $("#registration-modal");
+        var selectors = {
+          context: context,
+          login: $("#login", context),
+          signup: $("#signup", context),
+          display_login: $('a.login', context),
+          display_signup: $('a.signup', context)
+        }
+    
+        new RegistrationModal().init(selectors);
+      };
+    </script>
+
+    <div data-html2canvas-ignore="true" id="report-problem-model" class="modal col m6 offset-m3 s10 offset-s1">
+      <div class="right">
+        <a id="hide-report-problem-model" href="#">
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
+      <div class="">
+        <h1 class="center">😺</h1>
+        <h2>Have some feedback for us? Please tell us what's happening so we can improve Katacoda.</h2>
+        <div class="">
+          <textarea name="name" id="feedback-contents" rows="16" cols="80"></textarea>
+        </div>
+        <div class="hidden">
+          <input type="checkbox" name="screenshot" value="screenshot" id="screenshot"><label for="screenshot">Send HTML Canvas as Screenshot. This will help us debug potential issues.</label>
+        </div>
+        <div class="">
+          <button type="button" name="button" class="btn small-btn primary-btn center">Send Feedback</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="debug-model" class="modal">
+      <div class="modal-content">
+        <h4>Debug Information</h4>
+        <p id="debug-info"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/handlebars.runtime-v4.0.5.js"></script>
+    <script type="text/javascript" src="/js/templates.js"></script>
+
+    <script type="text/javascript" src="/js/application.js"></script>
+    <script type="text/javascript" src="/js/vendor/html2canvas.js" async defer></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+    <div class="g-recaptcha" style="display: none" data-badge="inline" data-sitekey="6LcuVhgUAAAAAMCgjmRjhfoTXoTAOVNoJlSRs0tI" data-callback="onSubmit" data-size="invisible"></div>
+
+    <script type="text/javascript">
+      // The page was accessed by navigating into the history.
+      var TYPE_BACK_FORWARD = 2;
+      if(performance && performance.navigation.type == TYPE_BACK_FORWARD){
+        location.reload(true);
+      }
+      window.grecaptchaToken = 'skip';
+      var app;
+      $(document).ready(function() {
+        if(performance && performance.navigation.type == TYPE_BACK_FORWARD){
+          location.reload(true);
+          return;
+        }
+
+        app = new App();
+        
+        app.init();
+        app.stripe = {
+          publish_key: 'pk_live_fGt75qCtGfvQn73mpo5YCwca'
+        }
+      });
+
+      var reportProblem = $("#report-problem");
+      var reportProblemModal = $('#report-problem-model');
+      reportProblem.click(function() {
+        reportProblemModal.modal({dismissible: true, opacity: .8, top: '5%'}).modal('open');
+      });
+
+      $("#hide-report-problem-model", reportProblemModal).click(function() {
+        reportProblemModal.modal('close');
+      });
+      $("button", reportProblemModal).click(function() {
+        var b = $(this);
+        if(b.text() === "Sending...")
+          return;
+
+        
+        var feedback = $("#feedback-contents", reportProblemModal).val();
+        if(feedback === "")
+          return;
+
+        b.text("Sending...");
+        var includeScreenshot = $("#screenshot", reportProblemModal);
+
+        var katacodaHost = ''
+        if (window.course && window.course.view && window.course.view.project && window.course.view.project.katacodaHost) {
+          katacodaHost = window.course.view.project.katacodaHost;
+        }
+
+        if(includeScreenshot.is(':checked')) {
+          screenshot(function(err, jpg) {
+            $.ajax({
+              url: 'feedback',
+              type: 'POST',
+              data: {screenshot: jpg, feedback: feedback, url: window.location.href, katacodaHost: katacodaHost},
+              success: function() {
+                reportProblemModal.modal('close');
+                $("#feedback-contents", reportProblemModal).val("");
+                b.text("Send");
+                window.show_confirmation("Thank you for your feedback!");
+              },
+              error: function() {
+                $.ajax({
+                  url: 'feedback',
+                  type: 'POST',
+                  data: {feedback: feedback, url: window.location.href, katacodaHost: katacodaHost},
+                  success: function() {
+                    reportProblemModal.modal('close');
+                    $("#feedback-contents", reportProblemModal).val("");
+                    b.text("Send");
+                    window.show_confirmation("Thank you for your feedback!");
+                  }
+                })
+              }
+            })
+          })
+        } else {
+          $.ajax({
+            url: 'feedback',
+            type: 'POST',
+            data: {feedback: feedback, url: window.location.href, katacodaHost: katacodaHost},
+            success: function() {
+              reportProblemModal.modal('close');
+              $("#feedback-contents", reportProblemModal).val("");
+              b.text("Send");
+              window.show_confirmation("Thank you for your feedback!");
+            }
+          })
+        }
+      });
+
+      var screenshot = function(cb) {
+        $("#finished").addClass('hidden');
+        html2canvas(document.body, {
+          onrendered: function(canvas) {
+            $("#finished").addClass('hidden');
+            var jpg = canvas.toDataURL("image/png");
+            cb(null, jpg);
+          }
+        });
+      }
+      
+      window._csrf = '5FoAF578-YeBVlG4WJqg8kQirOPU_nCFgI1g';
+      window.nonce = 'p6llauA5HOAk830BtfsXIb%2Bqz%2Fzl%2FaqEO1IsPFhj8VM%3D';
+      window.on_application_load = function(app) {
+        if (window.trackJs) {
+          trackJs.addMetadata("region", 'europe');
+          trackJs.addMetadata("deployment", 'katacoda');
+        }
+        window.region = 'europe';
+        window.originalPathwayId = '';
+
+        modal_init();
+
+        if(typeof mermaid !== 'undefined' && mermaid.initialize){ 
+          mermaid.initialize({
+              startOnLoad:true,
+              flowchart: { 
+                curve: 'basis' 
+              }
+          });  
+        }
+      }
+    </script>
+  </body>
+</html>
+:ET:@base_urio:URI::HTTPS:@schemeI"
+https;T:
+@user0:@password0:
+@hostI"www.katacoda.com;T:
+@porti�:
+@pathI"/dannyb/scenarios/jobly;T:@query0:@opaque0:@fragment0:@parsero:URI::RFC3986_Parser:@regexp{:SCHEMEI/!\A[A-Za-z][A-Za-z0-9+\-.]*\z ;F:USERINFOI/'\A(?:%\h\h|[!$&-.0-;=A-Z_a-z~])*\z ;F:	HOSTI/h\A(?:(?<IP-literal>\[(?:(?<IPv6address>(?:\h{1,4}:){6}(?<ls32>\h{1,4}:\h{1,4}|(?<IPv4address>(?<dec-octet>[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]|\d)\.\g<dec-octet>\.\g<dec-octet>\.\g<dec-octet>))|::(?:\h{1,4}:){5}\g<ls32>|\h{,4}::(?:\h{1,4}:){4}\g<ls32>|(?:(?:\h{1,4}:)?\h{1,4})?::(?:\h{1,4}:){3}\g<ls32>|(?:(?:\h{1,4}:){,2}\h{1,4})?::(?:\h{1,4}:){2}\g<ls32>|(?:(?:\h{1,4}:){,3}\h{1,4})?::\h{1,4}:\g<ls32>|(?:(?:\h{1,4}:){,4}\h{1,4})?::\g<ls32>|(?:(?:\h{1,4}:){,5}\h{1,4})?::\h{1,4}|(?:(?:\h{1,4}:){,6}\h{1,4})?::)|(?<IPvFuture>v\h+\.[!$&-.0-;=A-Z_a-z~]+))\])|\g<IPv4address>|(?<reg-name>(?:%\h\h|[!$&-.0-9;=A-Z_a-z~])*))\z ;F:ABS_PATHI/L\A/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*(?:/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z ;F:REL_PATHI/K\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~])+(?:/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z ;F:
+QUERYI/)\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~/?])*\z ;F:FRAGMENTI/)\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~/?])*\z ;F:OPAQUEI/\A(?:[^/].*)?\z ;F:	PORTI/4\A[\x09\x0a\x0c\x0d ]*\d*[\x09\x0a\x0c\x0d ]*\z ;F:@error0
