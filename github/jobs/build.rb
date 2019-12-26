@@ -4,6 +4,7 @@ class Build < Jobly::Job
   def execute(repo:, commit: nil)
     logger.info "Building #{repo}"
 
+    # Send status update to GitHub
     if commit
       Loadrunner::Status.update repo: "YourGithubUser/#{repo}", 
         sha: commit, 
