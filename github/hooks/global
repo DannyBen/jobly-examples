@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'jobly/boot'
+
+commit = ENV['LOADRUNNER_COMMIT']
+repo = ENV['LOADRUNNER_REPO']
+
+Build.execute_async repo: repo, commit: commit
