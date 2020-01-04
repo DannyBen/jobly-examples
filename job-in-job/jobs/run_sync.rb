@@ -8,7 +8,7 @@ class RunSync < Jobly::Job
     count.times do |i|
       at i
       puts "Executing Job ##{i}"
-      SubJob.execute number: i
+      SubJob.run number: i
     end
 
     at count, "Done"

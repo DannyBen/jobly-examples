@@ -4,7 +4,7 @@
 class RunAsync < Jobly::Job
   def execute(count: 10)
     count.times do |i|
-      SubJob.execute_async number: i
+      SubJob.run_later number: i
     end
   end
 end
